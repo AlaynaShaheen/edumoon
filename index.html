@@ -538,17 +538,28 @@
             }
         }
         /* Explore */
-        .explore .container {
-  margin-top: 50px;
+        .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
+
 .image-container {
   display: flex;
-  overflow: hidden;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .image-link {
   position: relative;
-  margin-right: 10px;
+  margin: 1rem;
+  flex-basis: calc(25% - 2rem);
+  max-width: 300px;
+  text-align: center;
 }
 
 .image-text {
@@ -568,20 +579,37 @@
 .image-link:hover .image-text {
   opacity: 1;
 }
-img{
-    display: flex;
-    width: 300px;
-}
-.image-link img {
+
+.eimg {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   transition: transform 0.2s ease-in-out;
-  max-width: 100%;
-  max-height: 100%;
 }
 
 .image-link:hover img {
   transform: scale(1.05);
 }
-   
+
+@media screen and (max-width: 1024px) {
+  .image-link {
+    flex-basis: calc(33.33% - 2rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image-link {
+    flex-basis: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .image-link {
+    flex-basis: 100%;
+    margin: 0 0 1rem 0;
+  }
+}
+
     </style>
     <title>Mentoring</title>
 </head>
@@ -625,14 +653,14 @@ img{
     <section class="hero">
         <div class="container" id="hero">
             <img class="image"
-                src="WhatsApp Image 2023-05-12 at 7.51.20 PM.jpeg"
+                src="https://suryatenz.s3.ap-south-1.amazonaws.com/img/hinew.jpeg"
                 alt="Example Image">
             
             
             
             <div class="row">
                 <div class="col-sm-12 text-center">
-                    <a href="studentfinal (3) (3).html"><button class="btn demo-btn btn-md mt-3" style="border-radius:15px">Book a Demo Class</button></a>
+                    <a href="studentfinal (3) (3).html"><button class="btn demo-btn btn-md mt-3" style="border-radius:15px;position:relative;right:8px;">Book a Demo Class</button></a>
                     <a href="become a tutor (2).html"><button class="btn instructor-btn btn-md mt-3" style="border-radius:15px">Become an Instructor</button></a>
                  </div>
             </div>
@@ -643,22 +671,22 @@ img{
     <br>
     <h2 style="text-align: center;">EXPLORE US</h2>
     <div class="testimonial_border"></div>
-   <br><div class="contaier" style="padding-left: 12rem;">
+   <br><div class="container" >
    <div class="image-container">
-    <a href="#" class="image-link" style="padding-left: 2rem;">
-      <img src="https://rameshys.s3.eu-north-1.amazonaws.com/img/e1.jpeg" alt="Image 1">
+    <a href="#" class="image-link">
+      <img src="https://rameshys.s3.eu-north-1.amazonaws.com/img/e1.jpeg" alt="Image 1" class="eimg">
       <div class="image-text">SCHOOLING</div>
     </a>
-    <a href="#" class="image-link" style="padding-left: 3rem;">
-      <img src="https://rameshys.s3.eu-north-1.amazonaws.com/img/e21.jpg" alt="Image 2">
+    <a href="#" class="image-link">
+      <img src="https://rameshys.s3.eu-north-1.amazonaws.com/img/e21.jpg" alt="Image 2" class="eimg">
       <div class="image-text">INTERMEDIATE</div>
     </a>
-    <a href="#" class="image-link" style="padding-left: 2rem;">
-      <img src="https://rameshys.s3.eu-north-1.amazonaws.com/img/e31.jpg" alt="Image 3">
+    <a href="#" class="image-link">
+      <img src="https://rameshys.s3.eu-north-1.amazonaws.com/img/e31.jpg" alt="Image 3" class="eimg">
       <div class="image-text">ENGINEERING</div>
     </a>
-    <a href="#" class="image-link" style="padding-left: 2rem">
-      <img src="https://rameshys.s3.eu-north-1.amazonaws.com/img/e41.jpg" alt="Image 4">
+    <a href="#" class="image-link" >
+      <img src="https://rameshys.s3.eu-north-1.amazonaws.com/img/e41.jpg" alt="Image 4" class="eimg">
       <div class="image-text">HOBBIES</div>
     </a>
   </div>
